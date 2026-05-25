@@ -26,21 +26,33 @@ const httpServer = createServer(app);
 
 // ── Security ──────────────────────────────────────────────────────────────────
 app.use(helmet());
-const allowedOrigins = [
-  'http://localhost:3000',
-  process.env.FRONTEND_URL,
-].filter(Boolean);
-
 app.use(cors({
   origin: (origin, callback) => {
-    // allow requests with no origin (like mobile apps or curl requests)
-    if (!origin || allowedOrigins.includes(origin)) {
+    // Allow requests with no origin (mobile apps, curl, Postman)
+    if (!origin) return callback(null, true);
+    
+    const allowedOrigins = [
+      'http://localhost:3000',
+      'http://localhost:3001',
+      process.env.FRONTEND_URL,
+    ].filter(Boolean);
+
+    // Allow any vercel.app subdomain
+    const isVercel = origin.endsWith('.vercel.app');
+    
+    // Allow any render.com subdomain  
+    const isRender = origin.endsWith('.onrender.com');
+
+    if (allowedOrigins.includes(origin) || isVercel || isRender) {
       callback(null, true);
     } else {
-      callback(new Error('Not allowed by CORS'));
+      console.warn('[CORS] Blocked origin:', origin);
+      callback(new Error(`CORS: origin ${origin} not allowed`));
     }
   },
-  credentials: true
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 // ── Body parsing ──────────────────────────────────────────────────────────────
