@@ -1,0 +1,890 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$meta": {
+        "product": "VedaAI",
+        "version": "1.0.0",
+        "description": "Design system profile extracted from VedaAI teacher dashboard. Use this to replicate the visual language, layout patterns, and component anatomy consistently across new screens.",
+        "platforms": [
+            "web-desktop",
+            "mobile-web"
+        ]
+    },
+    "brandIdentity": {
+        "name": "VedaAI",
+        "logoMark": {
+            "shape": "rounded square",
+            "iconFill": "white",
+            "iconSymbol": "bold V letterform",
+            "background": "brand.primary",
+            "borderRadius": "10px",
+            "size": {
+                "width": 36,
+                "height": 36
+            }
+        },
+        "wordmark": {
+            "text": "VedaAI",
+            "fontWeight": "700",
+            "fontSize": "20px",
+            "color": "text.primary",
+            "letterSpacing": "-0.02em"
+        },
+        "tone": "professional, approachable, education-tech, clean"
+    },
+    "colorTokens": {
+        "brand": {
+            "primary": "#E8472A",
+            "primaryHover": "#CC3A1F",
+            "primarySoft": "rgba(232, 71, 42, 0.1)"
+        },
+        "neutral": {
+            "50": "#F7F7F7",
+            "100": "#F0F0F0",
+            "200": "#E5E5E5",
+            "300": "#D4D4D4",
+            "400": "#A3A3A3",
+            "500": "#737373",
+            "600": "#525252",
+            "700": "#404040",
+            "800": "#262626",
+            "900": "#171717"
+        },
+        "surface": {
+            "page": "#EFEFEF",
+            "card": "#FFFFFF",
+            "sidebar": "#FFFFFF",
+            "overlay": "rgba(255,255,255,0.95)",
+            "inputBg": "#FFFFFF",
+            "darkNav": "#1A1A1A"
+        },
+        "text": {
+            "primary": "#1A1A1A",
+            "secondary": "#737373",
+            "tertiary": "#A3A3A3",
+            "inverse": "#FFFFFF",
+            "link": "#1A1A1A",
+            "linkHover": "#E8472A"
+        },
+        "status": {
+            "active": "#22C55E",
+            "warning": "#F59E0B",
+            "error": "#EF4444",
+            "info": "#3B82F6",
+            "notif": "#E8472A"
+        },
+        "semantic": {
+            "destructive": "#EF4444",
+            "destructiveHover": "#DC2626",
+            "onlineIndicator": "#22C55E",
+            "badgeBg": "#E8472A",
+            "badgeText": "#FFFFFF"
+        }
+    },
+    "typography": {
+        "fontFamily": {
+            "sans": "'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif",
+            "mono": "'JetBrains Mono', 'Fira Code', monospace"
+        },
+        "scale": {
+            "xs": {
+                "fontSize": "11px",
+                "lineHeight": "16px"
+            },
+            "sm": {
+                "fontSize": "12px",
+                "lineHeight": "18px"
+            },
+            "base": {
+                "fontSize": "14px",
+                "lineHeight": "22px"
+            },
+            "md": {
+                "fontSize": "15px",
+                "lineHeight": "24px"
+            },
+            "lg": {
+                "fontSize": "16px",
+                "lineHeight": "26px"
+            },
+            "xl": {
+                "fontSize": "18px",
+                "lineHeight": "28px"
+            },
+            "2xl": {
+                "fontSize": "20px",
+                "lineHeight": "30px"
+            },
+            "3xl": {
+                "fontSize": "24px",
+                "lineHeight": "34px"
+            }
+        },
+        "weights": {
+            "regular": 400,
+            "medium": 500,
+            "semibold": 600,
+            "bold": 700
+        },
+        "roles": {
+            "pageTitle": {
+                "size": "2xl",
+                "weight": "bold",
+                "color": "text.primary",
+                "letterSpacing": "-0.02em"
+            },
+            "pageSubtitle": {
+                "size": "sm",
+                "weight": "regular",
+                "color": "text.secondary"
+            },
+            "sectionHeading": {
+                "size": "lg",
+                "weight": "bold",
+                "color": "text.primary"
+            },
+            "cardTitle": {
+                "size": "md",
+                "weight": "bold",
+                "color": "text.primary",
+                "textDecoration": "underline"
+            },
+            "bodyDefault": {
+                "size": "base",
+                "weight": "regular",
+                "color": "text.primary"
+            },
+            "bodySecondary": {
+                "size": "sm",
+                "weight": "regular",
+                "color": "text.secondary"
+            },
+            "label": {
+                "size": "sm",
+                "weight": "medium",
+                "color": "text.primary"
+            },
+            "labelMeta": {
+                "size": "sm",
+                "weight": "bold",
+                "color": "text.primary"
+            },
+            "navItem": {
+                "size": "base",
+                "weight": "medium",
+                "color": "text.secondary"
+            },
+            "navItemActive": {
+                "size": "base",
+                "weight": "medium",
+                "color": "text.primary"
+            },
+            "buttonPrimary": {
+                "size": "base",
+                "weight": "semibold",
+                "color": "text.inverse"
+            },
+            "buttonSecondary": {
+                "size": "base",
+                "weight": "medium",
+                "color": "text.primary"
+            },
+            "badge": {
+                "size": "xs",
+                "weight": "bold",
+                "color": "semantic.badgeText"
+            },
+            "placeholder": {
+                "size": "base",
+                "weight": "regular",
+                "color": "text.tertiary"
+            },
+            "emptyStateTitle": {
+                "size": "xl",
+                "weight": "bold",
+                "color": "text.primary"
+            },
+            "emptyStateBody": {
+                "size": "base",
+                "weight": "regular",
+                "color": "text.secondary",
+                "textAlign": "center"
+            }
+        }
+    },
+    "spacing": {
+        "base": 4,
+        "scale": {
+            "0": "0px",
+            "1": "4px",
+            "2": "8px",
+            "3": "12px",
+            "4": "16px",
+            "5": "20px",
+            "6": "24px",
+            "7": "28px",
+            "8": "32px",
+            "10": "40px",
+            "12": "48px",
+            "16": "64px"
+        },
+        "semantic": {
+            "cardPadding": "20px 24px",
+            "cardPaddingMobile": "16px 18px",
+            "sidebarPadding": "20px 16px",
+            "pagePadding": "24px 28px",
+            "pagePaddingMobile": "16px",
+            "inputPaddingX": "14px",
+            "inputPaddingY": "10px",
+            "sectionGap": "20px",
+            "cardGridGap": "16px",
+            "listItemGap": "12px",
+            "inlineIconGap": "8px"
+        }
+    },
+    "borderRadius": {
+        "none": "0px",
+        "sm": "6px",
+        "md": "10px",
+        "lg": "14px",
+        "xl": "18px",
+        "2xl": "24px",
+        "full": "9999px",
+        "semantic": {
+            "card": "14px",
+            "button": "9999px",
+            "buttonSquarish": "10px",
+            "input": "10px",
+            "badge": "9999px",
+            "sidebar": "0px",
+            "schoolCard": "14px",
+            "fab": "9999px",
+            "contextMenu": "10px",
+            "dropzone": "12px",
+            "stepperControl": "9999px",
+            "mobileBottomNav": "20px 20px 0 0"
+        }
+    },
+    "shadows": {
+        "none": "none",
+        "sm": "0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06)",
+        "md": "0 4px 12px rgba(0,0,0,0.08)",
+        "lg": "0 8px 24px rgba(0,0,0,0.10)",
+        "contextMenu": "0 4px 16px rgba(0,0,0,0.12)",
+        "semantic": {
+            "card": "sm",
+            "contextMenu": "contextMenu",
+            "fab": "lg",
+            "sidebarCard": "sm"
+        }
+    },
+    "borders": {
+        "default": "1px solid #E5E5E5",
+        "focus": "1.5px solid #1A1A1A",
+        "brandFocus": "2px solid #E8472A",
+        "dropzone": "1.5px dashed #D4D4D4",
+        "none": "none",
+        "semantic": {
+            "input": "default",
+            "dropzone": "dropzone",
+            "card": "none",
+            "sidebarItem": "none"
+        }
+    },
+    "layout": {
+        "desktop": {
+            "pattern": "fixed-sidebar + fluid-main",
+            "sidebar": {
+                "width": "240px",
+                "minWidth": "220px",
+                "background": "surface.sidebar",
+                "border": "right: 1px solid neutral.200",
+                "position": "fixed",
+                "height": "100vh",
+                "overflowY": "auto",
+                "zIndex": 100,
+                "structure": [
+                    {
+                        "slot": "logo",
+                        "position": "top",
+                        "marginBottom": "spacing.6"
+                    },
+                    {
+                        "slot": "primaryCTA",
+                        "position": "top",
+                        "marginBottom": "spacing.6"
+                    },
+                    {
+                        "slot": "navLinks",
+                        "position": "middle",
+                        "flex": 1
+                    },
+                    {
+                        "slot": "settings",
+                        "position": "bottom",
+                        "marginTop": "auto"
+                    },
+                    {
+                        "slot": "schoolCard",
+                        "position": "bottom",
+                        "marginTop": "spacing.2"
+                    }
+                ]
+            },
+            "main": {
+                "marginLeft": "240px",
+                "background": "surface.page",
+                "minHeight": "100vh",
+                "header": {
+                    "height": "56px",
+                    "background": "surface.card",
+                    "border": "bottom: 1px solid neutral.200",
+                    "padding": "0 spacing.7",
+                    "layout": "flex, space-between, vertically-centered",
+                    "slots": [
+                        "backButton + breadcrumb (left)",
+                        "userMenu (right)"
+                    ]
+                },
+                "content": {
+                    "padding": "spacing.6 spacing.7"
+                }
+            }
+        },
+        "mobile": {
+            "pattern": "top-header + scrollable-content + fixed-bottom-nav",
+            "topHeader": {
+                "height": "56px",
+                "background": "surface.card",
+                "padding": "0 16px",
+                "layout": "flex, space-between, vertically-centered",
+                "slots": [
+                    "logo+wordmark (left)",
+                    "notification-bell + avatar + hamburger (right)"
+                ]
+            },
+            "bottomNav": {
+                "height": "64px",
+                "background": "surface.darkNav",
+                "position": "fixed",
+                "bottom": 0,
+                "left": 0,
+                "right": 0,
+                "borderRadius": "borderRadius.semantic.mobileBottomNav",
+                "padding": "0 spacing.4",
+                "layout": "flex, space-around, vertically-centered",
+                "tabCount": 4,
+                "tabStyle": {
+                    "icon": "outline (inactive) / filled (active)",
+                    "label": "typography.xs, weight-medium",
+                    "activeColor": "surface.card",
+                    "inactiveColor": "neutral.500"
+                }
+            },
+            "fab": {
+                "size": "52px",
+                "background": "brand.primary",
+                "color": "text.inverse",
+                "icon": "plus",
+                "iconSize": "22px",
+                "position": "fixed",
+                "bottom": "84px",
+                "right": "16px",
+                "borderRadius": "borderRadius.full",
+                "shadow": "shadows.lg"
+            },
+            "content": {
+                "padding": "spacing.4",
+                "paddingBottom": "80px"
+            }
+        }
+    },
+    "navigation": {
+        "sidebar": {
+            "itemHeight": "40px",
+            "itemPadding": "0 12px",
+            "itemBorderRadius": "borderRadius.md",
+            "itemGap": "spacing.1",
+            "iconSize": "18px",
+            "iconColor": "text.secondary",
+            "iconColorActive": "text.primary",
+            "hoverBg": "neutral.100",
+            "activeBg": "neutral.100",
+            "activeWeight": "medium",
+            "badgeStyle": {
+                "bg": "brand.primary",
+                "color": "text.inverse",
+                "size": "20px",
+                "borderRadius": "borderRadius.full",
+                "fontSize": "11px",
+                "fontWeight": "bold"
+            }
+        }
+    },
+    "components": {
+        "primaryCTAButton": {
+            "description": "Main sidebar action button – dark pill with sparkle icon",
+            "variants": {
+                "sidebar": {
+                    "background": "neutral.900",
+                    "color": "text.inverse",
+                    "border": "2px solid brand.primary",
+                    "borderRadius": "borderRadius.full",
+                    "height": "44px",
+                    "width": "100%",
+                    "padding": "0 spacing.5",
+                    "fontSize": "typography.base",
+                    "fontWeight": "semibold",
+                    "icon": "sparkle/star – left of label",
+                    "iconColor": "brand.primary",
+                    "iconSize": "16px",
+                    "gap": "spacing.2"
+                },
+                "pageBottom": {
+                    "background": "neutral.900",
+                    "color": "text.inverse",
+                    "borderRadius": "borderRadius.full",
+                    "height": "48px",
+                    "padding": "0 spacing.8",
+                    "icon": "plus – left of label",
+                    "iconColor": "text.inverse"
+                }
+            }
+        },
+        "secondaryButton": {
+            "background": "surface.card",
+            "color": "text.primary",
+            "border": "borders.default",
+            "borderRadius": "borderRadius.full",
+            "height": "44px",
+            "padding": "0 spacing.6",
+            "fontSize": "typography.base",
+            "fontWeight": "medium"
+        },
+        "card": {
+            "background": "surface.card",
+            "borderRadius": "borderRadius.semantic.card",
+            "shadow": "shadows.sm",
+            "border": "none",
+            "padding": "spacing.semantic.cardPadding",
+            "variants": {
+                "assignmentCard": {
+                    "layout": "flex-column",
+                    "headerRow": "flex, space-between, vertically-start",
+                    "footerRow": "flex, space-between, vertically-end",
+                    "moreButton": {
+                        "icon": "vertical ellipsis (three dots)",
+                        "size": "20px",
+                        "color": "text.secondary",
+                        "hoverColor": "text.primary"
+                    },
+                    "titleStyle": "typography.roles.cardTitle",
+                    "metaStyle": "typography.roles.bodySecondary",
+                    "metaPattern": "labelBold: value",
+                    "hover": {
+                        "shadow": "shadows.md",
+                        "transition": "0.15s ease"
+                    }
+                },
+                "schoolProfileCard": {
+                    "layout": "flex-row, gap-3, vertically-centered",
+                    "background": "neutral.100",
+                    "borderRadius": "borderRadius.semantic.schoolCard",
+                    "padding": "12px 14px",
+                    "avatarSize": "40px",
+                    "avatarRadius": "borderRadius.full",
+                    "nameFontWeight": "bold",
+                    "subNameColor": "text.secondary"
+                }
+            }
+        },
+        "contextMenu": {
+            "background": "surface.card",
+            "border": "1px solid neutral.200",
+            "borderRadius": "borderRadius.semantic.contextMenu",
+            "shadow": "shadows.semantic.contextMenu",
+            "padding": "6px",
+            "minWidth": "160px",
+            "itemHeight": "36px",
+            "itemPadding": "0 12px",
+            "itemBorderRadius": "borderRadius.sm",
+            "itemHoverBg": "neutral.100",
+            "itemFontSize": "typography.base",
+            "itemFontWeight": "medium",
+            "itemColorDefault": "text.primary",
+            "itemColorDestructive": "semantic.destructive",
+            "separator": {
+                "border": "1px solid neutral.200",
+                "margin": "4px 0"
+            }
+        },
+        "emptyState": {
+            "layout": "flex-column, centered, gap-4",
+            "illustrationSize": "220px",
+            "titleStyle": "typography.roles.emptyStateTitle",
+            "bodyStyle": "typography.roles.emptyStateBody",
+            "bodyMaxWidth": "320px",
+            "ctaMarginTop": "spacing.4",
+            "illustration": {
+                "style": "soft, flat, SVG-style",
+                "palette": [
+                    "neutral.200",
+                    "neutral.300",
+                    "brand.primary (accent)",
+                    "status.info"
+                ],
+                "backgroundCircle": "neutral.200 / neutral.300",
+                "accentElements": "sparkle stars, small colored dots",
+                "mood": "friendly, non-threatening"
+            }
+        },
+        "input": {
+            "height": "44px",
+            "background": "surface.card",
+            "border": "borders.default",
+            "borderRadius": "borderRadius.semantic.input",
+            "padding": "spacing.semantic.inputPaddingY spacing.semantic.inputPaddingX",
+            "fontSize": "typography.base",
+            "color": "text.primary",
+            "placeholderColor": "text.tertiary",
+            "focusBorder": "borders.focus",
+            "iconLeft": {
+                "color": "text.tertiary",
+                "size": "16px",
+                "paddingLeft": "40px"
+            },
+            "iconRight": {
+                "color": "text.secondary",
+                "size": "16px"
+            },
+            "variants": {
+                "searchBar": {
+                    "iconLeft": "magnifying glass",
+                    "borderRadius": "borderRadius.full",
+                    "height": "42px"
+                },
+                "dateInput": {
+                    "iconRight": "calendar-plus",
+                    "placeholder": "DD-MM-YYYY"
+                }
+            }
+        },
+        "dropzone": {
+            "layout": "flex-column, centered, gap-2",
+            "background": "surface.card",
+            "border": "borders.dropzone",
+            "borderRadius": "borderRadius.semantic.dropzone",
+            "padding": "spacing.8 spacing.6",
+            "minHeight": "120px",
+            "uploadIcon": {
+                "color": "text.secondary",
+                "size": "28px"
+            },
+            "titleStyle": "typography.base, weight-medium",
+            "subtitleStyle": "typography.sm, color-secondary",
+            "browseButton": {
+                "background": "surface.card",
+                "border": "borders.default",
+                "borderRadius": "borderRadius.sm",
+                "height": "34px",
+                "padding": "0 spacing.4",
+                "fontSize": "typography.sm",
+                "fontWeight": "medium"
+            },
+            "helpText": {
+                "fontSize": "typography.sm",
+                "color": "text.tertiary",
+                "marginTop": "spacing.2"
+            }
+        },
+        "stepperInput": {
+            "description": "Numeric stepper used for question count / marks",
+            "layout": "flex-row, vertically-centered, gap-2",
+            "buttonSize": "28px",
+            "buttonBackground": "surface.page",
+            "buttonBorder": "borders.default",
+            "buttonBorderRadius": "borderRadius.full",
+            "buttonIconSize": "14px",
+            "buttonColor": "text.primary",
+            "valueWidth": "32px",
+            "valueStyle": "typography.base, weight-semibold, text-center",
+            "label": {
+                "fontSize": "typography.sm",
+                "color": "text.secondary",
+                "marginBottom": "spacing.1"
+            }
+        },
+        "questionTypeRow": {
+            "layout": "grid, columns: [1fr auto auto], gap: 12px, vertically-centered",
+            "background": "surface.card",
+            "border": "borders.default",
+            "borderRadius": "borderRadius.md",
+            "padding": "12px 14px",
+            "dropdown": {
+                "background": "surface.card",
+                "border": "borders.default",
+                "borderRadius": "borderRadius.md",
+                "height": "40px",
+                "chevronColor": "text.secondary",
+                "fontSize": "typography.base"
+            },
+            "removeButton": {
+                "icon": "X / close",
+                "color": "text.secondary",
+                "hoverColor": "semantic.destructive",
+                "size": "18px"
+            },
+            "addRowButton": {
+                "icon": "plus circle (filled, dark)",
+                "iconSize": "28px",
+                "label": "inline text, weight-medium",
+                "layout": "flex-row, gap-2, vertically-centered",
+                "color": "text.primary"
+            }
+        },
+        "filterBar": {
+            "layout": "flex-row, space-between, gap-3",
+            "filterButton": {
+                "icon": "funnel/filter",
+                "iconSize": "14px",
+                "label": "Filter By",
+                "fontSize": "typography.base",
+                "color": "text.secondary",
+                "fontWeight": "medium",
+                "background": "transparent"
+            },
+            "searchInput": "components.input.variants.searchBar"
+        },
+        "progressBar": {
+            "description": "Multi-step form progress indicator at top of stepper pages",
+            "height": "4px",
+            "background": "neutral.200",
+            "fill": "neutral.900",
+            "borderRadius": "borderRadius.full",
+            "marginBottom": "spacing.6"
+        },
+        "notificationBell": {
+            "iconSize": "22px",
+            "color": "text.primary",
+            "badge": {
+                "size": "8px",
+                "color": "brand.primary",
+                "position": "top-right",
+                "offset": "-2px"
+            }
+        },
+        "userAvatar": {
+            "size": "34px",
+            "borderRadius": "borderRadius.full",
+            "style": "photo / illustrated avatar",
+            "border": "none"
+        },
+        "userMenu": {
+            "layout": "flex-row, gap-2, vertically-centered",
+            "nameStyle": "typography.base, weight-medium",
+            "chevron": "down, size: 14px, color: text.secondary"
+        },
+        "breadcrumb": {
+            "layout": "flex-row, gap-2, vertically-centered",
+            "backButton": {
+                "icon": "arrow-left",
+                "size": "20px",
+                "color": "text.secondary"
+            },
+            "icon": "grid / module icon, 16px, color: text.secondary",
+            "label": "typography.base, weight-medium, color-primary"
+        },
+        "onlineIndicator": {
+            "size": "10px",
+            "color": "status.active",
+            "borderRadius": "borderRadius.full",
+            "position": "inline, left of title"
+        },
+        "totalsSummary": {
+            "layout": "flex-column, align-end",
+            "fontSize": "typography.base",
+            "fontWeight": "medium",
+            "color": "text.primary",
+            "lineGap": "spacing.1"
+        }
+    },
+    "pageTemplates": {
+        "emptyStatePage": {
+            "description": "Shown when a list has no items yet",
+            "layout": "centered vertically and horizontally within main content area",
+            "structure": [
+                "illustration (SVG, ~220px)",
+                "title (emptyStateTitle)",
+                "description (emptyStateBody, max-width 320px)",
+                "primaryCTAButton (pageBottom variant)"
+            ]
+        },
+        "listPage": {
+            "description": "Grid of cards with filter/search toolbar at top",
+            "header": {
+                "layout": "flex-column, gap-1",
+                "slots": [
+                    "onlineIndicator + pageTitle",
+                    "pageSubtitle"
+                ]
+            },
+            "toolbar": {
+                "layout": "flex-row, space-between, gap-3",
+                "slots": [
+                    "filterButton (left)",
+                    "searchInput (right, ~280px)"
+                ]
+            },
+            "grid": {
+                "desktop": "2 columns, gap: 16px",
+                "mobile": "1 column, gap: 12px"
+            },
+            "mobileFooter": {
+                "position": "fixed bottom",
+                "background": "surface.card",
+                "shadow": "0 -2px 12px rgba(0,0,0,0.06)",
+                "padding": "12px 16px",
+                "content": "primaryCTAButton (full width)"
+            }
+        },
+        "formPage": {
+            "description": "Multi-step form (e.g. Create Assignment)",
+            "progressBar": "top of content area, full width",
+            "contentCard": {
+                "background": "surface.card",
+                "borderRadius": "borderRadius.xl",
+                "padding": "spacing.8",
+                "shadow": "shadows.md"
+            },
+            "sectionTitle": "typography.roles.sectionHeading, marginBottom: spacing.1",
+            "sectionSubtitle": "typography.roles.bodySecondary, marginBottom: spacing.5",
+            "footerNavigation": {
+                "layout": "flex-row, space-between",
+                "position": "page bottom, outside card",
+                "backButton": "secondaryButton with left-arrow icon",
+                "nextButton": "primaryCTAButton (pageBottom variant) with right-arrow icon"
+            }
+        },
+        "aiOutputPage": {
+            "description": "AI Teacher Toolkit result view",
+            "headerBanner": {
+                "background": "neutral.900",
+                "color": "text.inverse",
+                "padding": "spacing.5 spacing.7",
+                "borderRadius": "borderRadius.lg borderRadius.lg 0 0",
+                "messageStyle": "typography.base, color-inverse",
+                "downloadButton": {
+                    "background": "transparent",
+                    "border": "1px solid rgba(255,255,255,0.3)",
+                    "color": "text.inverse",
+                    "borderRadius": "borderRadius.sm",
+                    "height": "34px",
+                    "icon": "download, left",
+                    "marginTop": "spacing.3"
+                }
+            },
+            "documentPreview": {
+                "background": "surface.card",
+                "border": "borders.default",
+                "borderRadius": "borderRadius.lg",
+                "padding": "spacing.8 spacing.10",
+                "shadow": "shadows.sm",
+                "typography": {
+                    "schoolName": "2xl, bold, centered",
+                    "subject": "lg, semibold, centered",
+                    "classInfo": "base, regular, centered",
+                    "metaRow": "flex-row, space-between, base",
+                    "sectionHeader": "xl, bold, centered",
+                    "questionNumbering": "numbered list",
+                    "difficultyTag": "[Easy] [Moderate] [Challenging] prefix in brackets"
+                }
+            }
+        }
+    },
+    "motionAndInteraction": {
+        "transitions": {
+            "default": "150ms ease",
+            "card": "150ms ease (shadow, transform)",
+            "button": "120ms ease (background, opacity)",
+            "sidebar": "200ms ease",
+            "contextMenu": "100ms ease (opacity, scale)"
+        },
+        "hoverBehaviors": {
+            "card": "shadow: sm → md",
+            "navItem": "background: transparent → neutral.100",
+            "button": "background: darken 8%",
+            "moreButton": "color: secondary → primary"
+        },
+        "contextMenuTrigger": "click on vertical ellipsis (⋮) button",
+        "contextMenuPlacement": "below trigger, right-aligned"
+    },
+    "iconography": {
+        "library": "Lucide / Heroicons style (outlined, 1.5px stroke)",
+        "sizes": {
+            "sm": "14px",
+            "md": "18px",
+            "lg": "22px"
+        },
+        "commonIcons": {
+            "home": "grid-2x2 / squares",
+            "groups": "users",
+            "assignments": "document / clipboard",
+            "aiToolkit": "sparkle / wand",
+            "library": "clock / history",
+            "settings": "gear",
+            "notification": "bell",
+            "search": "magnifying glass",
+            "filter": "funnel",
+            "create": "sparkle + plus",
+            "more": "vertical ellipsis (⋮)",
+            "back": "arrow-left",
+            "delete": "trash (destructive color)",
+            "download": "download-cloud",
+            "upload": "upload-cloud",
+            "calendar": "calendar-plus",
+            "close": "x",
+            "chevronDown": "chevron-down",
+            "fab": "plus"
+        }
+    },
+    "responsiveBehavior": {
+        "breakpoints": {
+            "mobile": "< 768px",
+            "tablet": "768px – 1024px",
+            "desktop": "> 1024px"
+        },
+        "adaptations": {
+            "sidebar": {
+                "desktop": "fixed left sidebar, always visible",
+                "mobile": "hidden; replaced by bottom tab bar + hamburger menu"
+            },
+            "cardGrid": {
+                "desktop": "2 columns",
+                "mobile": "1 column, full width"
+            },
+            "questionTypeRow": {
+                "desktop": "inline stepper controls (question count + marks in same row as type)",
+                "mobile": "dropdown on top, steppers below in card block"
+            },
+            "headerActions": {
+                "desktop": "notification bell + username + chevron",
+                "mobile": "notification bell + avatar + hamburger"
+            },
+            "pageTitle": {
+                "desktop": "rendered in main content header area",
+                "mobile": "centered in top navigation bar row"
+            }
+        }
+    },
+    "designPrinciples": [
+        "Clean, whitespace-generous layout with clear visual hierarchy",
+        "Neutral base (grays + white) with a single warm accent (orange-red brand color)",
+        "Brand color used sparingly: primary CTA borders, notification badges, FAB, active states",
+        "Cards are the primary content container; no tables or dense lists",
+        "Consistent pill/rounded shapes for interactive elements (buttons, inputs, badges)",
+        "Dark color (#1A1A1A) for primary actions; white text on dark; inverse never uses brand color as bg on large elements",
+        "Destructive actions (delete) are text-only in context menus, colored red",
+        "AI-generated content presented in a document-preview style with a dark header banner",
+        "Mobile-first in content decisions but desktop-first in navigation pattern",
+        "Typography hierarchy communicated through weight (bold → semibold → medium → regular) not size alone"
+    ]
+}
