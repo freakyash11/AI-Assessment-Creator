@@ -106,8 +106,9 @@ export function useWebSocket() {
         if (data.type === 'job:completed') {
           const currentStatus = useAssessmentStore.getState().jobStatus;
           if (currentStatus === 'processing' || currentStatus === 'pending') {
-            const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
-            fetch(`${apiUrl}/api/papers/${data.assignmentId}`)
+            const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+            const base = apiUrl.endsWith('/') ? apiUrl : `${apiUrl}/`;
+            fetch(`${base}papers/${data.assignmentId}`)
               .then(r => r.json())
               .then(paper => {
                 setGeneratedPaper(paper);

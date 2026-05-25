@@ -1,8 +1,11 @@
 import axios from 'axios';
 import { AssignmentFormData, QuestionPaper } from '../store/assessmentStore';
 
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+const baseURL = apiUrl.endsWith('/') ? apiUrl : `${apiUrl}/`;
+
 const api = axios.create({
-  baseURL: `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/`,
+  baseURL,
   withCredentials: false,
   headers: {
     'Content-Type': 'application/json',

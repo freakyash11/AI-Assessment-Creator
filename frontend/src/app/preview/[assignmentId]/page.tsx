@@ -25,11 +25,11 @@ export default function PreviewPage({ params }: { params: Promise<{ assignmentId
   useEffect(() => {
     const loadAssignment = async () => {
       try {
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
-        
-        // First try to get assignment + paper together
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+        const base = apiUrl.endsWith('/') ? apiUrl : `${apiUrl}/`;
+
         const res = await fetch(
-          `${apiUrl}/api/assignments/${assignmentId}`
+          `${base}assignments/${assignmentId}`
         );
         
         if (!res.ok) {
@@ -59,7 +59,7 @@ export default function PreviewPage({ params }: { params: Promise<{ assignmentId
           // If still processing, try fetching paper separately after delay
           const pollPaper = async () => {
             const paperRes = await fetch(
-              `${apiUrl}/api/papers/${assignmentId}`
+              `${base}papers/${assignmentId}`
             );
             if (paperRes.ok) {
               const paperData = await paperRes.json();
@@ -70,7 +70,7 @@ export default function PreviewPage({ params }: { params: Promise<{ assignmentId
           // Poll every 5 seconds
           const pollInterval = setInterval(async () => {
             const statusRes = await fetch(
-              `${apiUrl}/api/assignments/${assignmentId}`
+              `${base}assignments/${assignmentId}`
             );
             if (statusRes.ok) {
               const data = await statusRes.json();
